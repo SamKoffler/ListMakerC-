@@ -1,0 +1,26 @@
+// Let's program a list maker UI in C++
+#include <iostream>
+#include <vector>
+using std::cout;
+using std::cin;
+using std::endl;
+using std::vector;
+
+int main() {
+    vector<int> my_vec;
+    int ui;
+    cout << "Enter a number to add to list, or stop to finish:" << endl;
+    while (cin >> ui) {
+        my_vec.push_back(ui);
+    }
+    cout << "Your vec is: ";
+    for (size_t i = 0; i < my_vec.size(); i++) {
+        if (i == my_vec.size()-1) {
+            cout << my_vec.at(i);
+        }
+        else {
+             cout << my_vec.at(i) << ",";
+        }
+    }
+    return 0;
+}
